@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Dashboard</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout */
+body {
+    display: flex;
+    background: #fafafa;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    color: #ff416c;
+    transform: translateX(5px);
+}
+
+/* Main Content */
+.main {
+    margin-left: 240px;
+    width: 60%;
+    padding: 20px;
+}
+
+/* Stories */
+.stories {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.story {
+    text-align: center;
+}
+
+.story img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #ff416c;
+}
+
+.story p {
+    font-size: 12px;
+}
+
+/* Post Card */
+.post {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Post Image */
+.post img {
+    width: 100%;
+}
+
+/* Post Actions */
+.post-actions {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.post-actions span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 20%;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-box img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestions h4 {
+    margin-bottom: 10px;
+}
+
+.suggestion {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.suggestion span {
+    color: #1e90ff;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .right-panel {
+        display: none;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Instagram</h2>
+    <ul>
+        <li>🏠 Home</li>
+        <li>🔍 Search</li>
+        <li>🎬 Reels</li>
+        <li>💬 Messages</li>
+        <li>❤️ Notifications</li>
+        <li>➕ Create</li>
+        <li>👤 Profile</li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <!-- Stories -->
+    <div class="stories">
+        <div class="story">
+            <img src="https://i.pravatar.cc/150?img=1">
+            <p>You</p>
+        </div>
+        <div class="story">
+            <img src="https://i.pravatar.cc/150?img=2">
+            <p>Alex</p>
+        </div>
+        <div class="story">
+            <img src="https://i.pravatar.cc/150?img=3">
+            <p>Sam</p>
+        </div>
+        <div class="story">
+            <img src="https://i.pravatar.cc/150?img=4">
+            <p>John</p>
+        </div>
+    </div>
+
+    <!-- Post -->
+    <div class="post">
+        <div class="post-header">
+            <img src="https://i.pravatar.cc/150?img=5">
+            <b>john_doe</b>
+        </div>
+        <img src="https://picsum.photos/600/400">
+        <div class="post-actions">
+            ❤️ 💬 📤
+        </div>
+        <div style="padding:10px;">
+            <b>john_doe</b> Amazing view 🌄
+        </div>
+    </div>
+
+    <!-- Post -->
+    <div class="post">
+        <div class="post-header">
+            <img src="https://i.pravatar.cc/150?img=6">
+            <b>alex_99</b>
+        </div>
+        <img src="https://picsum.photos/600/401">
+        <div class="post-actions">
+            ❤️ 💬 📤
+        </div>
+        <div style="padding:10px;">
+            <b>alex_99</b> Life is good 😎
+        </div>
+    </div>
+
+</div>
+
+<!-- Right Panel -->
+<div class="right-panel">
+
+    <div class="profile-box">
+        <img src="https://i.pravatar.cc/150?img=7">
+        <div>
+            <b>your_username</b><br>
+            <small>Welcome back</small>
+        </div>
+    </div>
+
+    <div class="suggestions">
+        <h4>Suggestions</h4>
+
+        <div class="suggestion">
+            <p>maria</p>
+            <span>Follow</span>
+        </div>
+
+        <div class="suggestion">
+            <p>rohit</p>
+            <span>Follow</span>
+        </div>
+
+        <div class="suggestion">
+            <p>emma</p>
+            <span>Follow</span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

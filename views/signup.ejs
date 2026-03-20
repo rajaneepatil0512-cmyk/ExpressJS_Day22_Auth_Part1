@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background Animation */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #565051, #473b39, #1e90ff, #6a11cb);
+    background-size: 800% 800%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glass Card */
+.container {
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    color: #fff;
+    text-align: center;
+}
+
+/* Title */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Input Group */
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 14px;
+    color: #ddd;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Floating Effect */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background: #00000080;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #6e5e61, #e0bab3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+
+    <form action="/signup" method="POST">
+
+        <!-- Username -->
+        <div class="input-group">
+            <input type="text" id="username" name="username" required>
+            <label for="username">Username</label>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <input type="email" id="useremail" name="useremail" required>
+            <label for="useremail">Email</label>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+        </div>
+
+        <!-- Phone -->
+        <div class="input-group">
+            <input type="tel" id="phone" name="phone" required>
+            <label for="phone">Phone Number</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <div class="footer">
+        Already have an account? <a href="/">Login</a>
+    </div>
+</div>
+
+</body>
+</html>
